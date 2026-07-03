@@ -2,9 +2,17 @@ import React from 'react';
 import {useState} from 'react';
 import { useEffect } from 'react';
 import './App.css';
+import {
+  HumanMessage, 
+  SystemMessage,
+  AIMessage, 
+  BaseMessage, 
+} from "@langchain/core/messagess";
 
 function App() {
-  const [name, setName] = useState("mario");
+  const [inputMess, setInputMess] = useState("")
+
+  const [messages, setMessages] = useState<BaseMessage>([]);
 
   const handleClick = () => {
     value = document.querySelector('.text-area').value;
@@ -18,6 +26,12 @@ function App() {
       <p> Welcome {name}!</p>
       <div className="chat-input">
         <form className="chat-input">
+        <input>
+          type = "text"
+          placeholder = "Type your query here..."
+          value = {inputMess}
+          onChange = {(e) => setInputMess(e.target.value)}
+        </input>
         <textarea className="text-area" placeholder="Type your query here..."></textarea>
         <button className="button" onClick={handleClick}>Send</button>
         </form>

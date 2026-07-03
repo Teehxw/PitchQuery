@@ -26,9 +26,13 @@ def fetch_schema():
 def run_query(sql_str):
     conn = sqlite3.connect(DB_PATH)
     curr = conn.cursor()
-    curr.execute(sql_str)
-    columns = [description[0] for description in curr.description]
-    rows = curr.fetchall()
+    try:
+        curr.execute(sql_str)
+        columns = [description[0] for description in curr.description]
+        rows = curr.fetchall()
 
-    conn.close()
-    return {"columns": columns, "rows": rows}
+        conn.close()
+        return {"columns": columns, "rows": rows}
+    except Exception as e:
+        conn.close()
+        return {"error": str(e)}
