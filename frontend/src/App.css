@@ -1,159 +1,128 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #080c10;
-  color: #e8edf2;
-  font-family: 'Inter', system-ui, sans-serif;
-  min-height: 100vh;
+  background: #ffffff;
+  color: #111111;
+  font-family: system-ui, sans-serif;
 }
 
 .App {
-  max-width: 860px;
+  max-width: 800px;
   margin: 0 auto;
-  padding: 60px 24px 40px;
+  padding: 60px 24px;
 }
 
 .header {
-  text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .badge {
-  display: inline-block;
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #4ade80;
-  background: rgba(74, 222, 128, 0.1);
-  border: 1px solid rgba(74, 222, 128, 0.2);
-  border-radius: 99px;
-  padding: 4px 12px;
-  margin-bottom: 20px;
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 10px;
+  display: block;
 }
 
 h1 {
-  font-size: 52px;
+  font-size: 36px;
   font-weight: 700;
-  letter-spacing: -0.03em;
-  line-height: 1.1;
-  margin-bottom: 12px;
-  background: linear-gradient(135deg, #fff 0%, #94a3b8 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  margin-bottom: 6px;
+  color: blue
 }
 
 .subtitle {
-  font-size: 16px;
-  color: #64748b;
-  margin-bottom: 8px;
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 20px;
 }
 
 .examples {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  justify-content: center;
-  margin-bottom: 32px;
+  margin-bottom: 8px;
 }
 
 .example-pill {
-  font-size: 12px;
-  color: #94a3b8;
-  background: #0f1923;
-  border: 1px solid #1e2d3d;
-  border-radius: 99px;
+  font-size: 13px;
+  color: #444;
+  background: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
   padding: 5px 12px;
   cursor: pointer;
-  transition: all 0.15s;
 }
 
 .example-pill:hover {
-  color: #e8edf2;
-  border-color: #4ade80;
+  background: #e8e8e8;
 }
 
 .chat-input {
   display: flex;
-  gap: 10px;
+  gap: 8px;
   margin-bottom: 32px;
-  background: #0f1923;
-  border: 1px solid #1e2d3d;
-  border-radius: 10px;
-  padding: 10px;
+  margin-top: 24px;
+ 
 }
 
 .input-field {
   flex: 1;
-  padding: 10px 12px;
+  padding: 10px 14px;
   font-size: 15px;
-  background: transparent;
-  border: none;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
   outline: none;
-  color: #e8edf2;
+  color: lightblue;
+
 }
 
-.input-field::placeholder { color: #334155; }
+.input-field:focus {
+  border-color: #888;
+}
 
 .button {
-  padding: 10px 20px;
-  background: #4ade80;
-  color: #080c10;
+  padding: 10px 18px;
+  background: #111;
+  color: #fff;
   border: none;
   border-radius: 6px;
   font-size: 14px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: opacity 0.15s;
-  white-space: nowrap;
-}
-
-.button:hover { opacity: 0.85; }
-.button:disabled { opacity: 0.4; cursor: not-allowed; }
-
-.results-section { margin-top: 8px; }
-
-.results-label {
-  font-size: 11px;
   font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: #334155;
-  margin-bottom: 12px;
+  cursor: pointer;
 }
+
+.button:hover { background: #333; }
+.button:disabled { opacity: 0.4; cursor: not-allowed; }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  background: #0f1923;
-  border: 1px solid #1e2d3d;
-  border-radius: 8px;
-  overflow: hidden;
+  font-size: 14px;
 }
 
 th {
   text-align: left;
-  padding: 11px 16px;
-  font-size: 11px;
+  padding: 10px 14px;
+  border-bottom: 2px solid #111;
+  font-size: 12px;
   font-weight: 600;
-  letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #4ade80;
-  background: #0a1520;
-  border-bottom: 1px solid #1e2d3d;
+  letter-spacing: 0.05em;
+  color: #444;
 }
 
 td {
-  padding: 11px 16px;
-  font-size: 14px;
-  color: #cbd5e1;
-  border-bottom: 1px solid #111e2a;
+  padding: 10px 14px;
+  border-bottom: 1px solid #ebebeb;
+  color: #222;
+  text-align: left;
 }
 
 tr:last-child td { border-bottom: none; }
-tr:hover td { background: #111e2a; }
+tr:hover td { background: #fafafa; }
 
-td {
-  text-align: left;
+.results-label {
+  font-size: 12px;
+  color: #888;
+  margin-bottom: 12px;
 }
