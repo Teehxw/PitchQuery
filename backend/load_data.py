@@ -1,6 +1,5 @@
 import sqlite3
 import pandas as pd
-import os
 
 # Used pandas instead of actually writing Table by table in sql to save writing lines of codes for manually entering the tables
 # Instead used pandas to just read in the csv file and make a table for each compnent
